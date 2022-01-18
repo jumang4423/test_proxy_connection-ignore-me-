@@ -9,8 +9,7 @@ const getData = async () => {
     return data
 
   } catch (e) {
-    console.log("rejected")
-    console.log(e)
+    alert(e)
     return null
   }
 }
@@ -19,8 +18,7 @@ export default function Home() {
   useEffect(async () => {
     const fetched = await getData()
     if (fetched != null) {
-      console.log("success")
-      console.log(fetched)
+      alert(fetched)
     }
   }, [])
 
